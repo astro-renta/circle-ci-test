@@ -49,7 +49,7 @@ jobs:
 
       # Database setup
       - run:
-          name: データベースの起動を待機
+          name: waiting for stating database
           command: dockerize -wait tcp://127.0.0.1:3306 -timeout 1m
       - run: bundle exec rake db:create
       - run: bundle exec rake db:schema:load
