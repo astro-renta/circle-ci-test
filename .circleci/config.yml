@@ -55,7 +55,7 @@ jobs:
       - run: bundle exec rake db:schema:load
 
       # run tests!
-       - run:
+      - run:
           name: Run rspec in parallel
           command: |
             bundle exec rspec --profile 10 \
